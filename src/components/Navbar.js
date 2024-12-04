@@ -102,7 +102,7 @@ const Navbar = () => {
             href="/user/dashboard"
             style={{ textDecoration: "none", color: "#3e5060" }}
           >
-            <Typography>TimeTracker</Typography>
+            <Typography>TimeTracke</Typography>
           </Link>
         )}
 
