@@ -23,7 +23,7 @@ const dashboardDesign = {
   marginTop: "50px",
 };
 
-const logview = () => {
+const Logview = () => {
   const [leaveRequests, setLeaveRequest] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -166,4 +166,4 @@ const logview = () => {
   );
 };
 
-export default logview;
+export default Logview;

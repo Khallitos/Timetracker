@@ -23,7 +23,7 @@ const dashboardDesign = {
   marginTop: "50px",
 };
 
-const timetrackerchanges = () => {
+const Timetrackerchanges = () => {
   const [timeChangeRequest, setTimeChangeRequest] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -275,4 +275,4 @@ const timetrackerchanges = () => {
   );
 };
 
-export default timetrackerchanges;
+export default Timetrackerchanges;

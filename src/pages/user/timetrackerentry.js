@@ -35,7 +35,7 @@ const workTimeValues = {
   comments: "",
 };
 
-const timetrackerentry = () => {
+const Timetrackerentry = () => {
   const toastDisplayedRef = useRef(false);
   const { workTimeChanges } = useAppContext();
   const router = useRouter();
@@ -225,4 +225,4 @@ const timetrackerentry = () => {
   );
 };
 
-export default timetrackerentry;
+export default Timetrackerentry;

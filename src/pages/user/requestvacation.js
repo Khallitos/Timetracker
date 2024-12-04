@@ -50,7 +50,7 @@ const vacationRequestDetails = {
   vacationType: "",
 };
 
-const requestvacation = () => {
+const Requestvacation = () => {
   const toastDisplayedRef = useRef(false);
   const { vacationLeaveTaken } = useAppContext();
   const router = useRouter();
@@ -257,4 +257,4 @@ const requestvacation = () => {
   );
 };
 
-export default requestvacation;
+export default Requestvacation;

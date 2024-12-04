@@ -170,6 +170,7 @@ const Navbar = () => {
                 src={pictureUrl || "/default-image.png"}
                 width={30}
                 height={30}
+                alt="logo"
                 style={{
                   borderRadius: "50%",
                   objectFit: "cover",

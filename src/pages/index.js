@@ -242,7 +242,7 @@ export default function Login() {
                   },
                 }}
               >
-                <img
+                <Image
                   src="https://developers.google.com/identity/images/g-logo.png"
                   alt="Google logo"
                   style={{

@@ -23,7 +23,7 @@ const dashboardDesign = {
   marginTop: "50px",
 };
 
-const timetrackerview = () => {
+const Timetrackerview = () => {
   const [timeSheet, setTimeSheet] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -207,4 +207,4 @@ const timetrackerview = () => {
   );
 };
 
-export default timetrackerview;
+export default Timetrackerview;

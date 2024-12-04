@@ -23,7 +23,7 @@ const dashboardDesign = {
   marginTop: "50px",
 };
 
-const vacationlistview = () => {
+const Vacationlistview = () => {
   const [leaveRequests, setLeaveRequest] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -177,4 +177,4 @@ const vacationlistview = () => {
   );
 };
 
-export default vacationlistview;
+export default Vacationlistview;
