@@ -49,8 +49,11 @@ const Dashboard = () => {
 
       if (role !== "admin") {
         if (!toastDisplayedRef.current) {
-          toast.error("You are not authorised to view this page", {});
-          // toastDisplayedRef.current = true;
+          toast.error("You are not authorized to view this page.", {
+            position: "top-center",
+            autoClose: 2000,
+          });
+          toastDisplayedRef.current = true;
         }
         router.push("/");
       } else {
