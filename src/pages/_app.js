@@ -1,7 +1,7 @@
 import React from "react";
 import { AppProvider } from "../context/AppContext";
 import Navbar from "../components/Navbar";
-import "../styles/globalS.css";
+import "../styles/globals.css";
 import Footer from "@/components/Footer";
 import { GoogleOAuthProvider } from "@react-oauth/google"; // Ensure this import is correct
 import { ToastContainer } from "react-toastify";
