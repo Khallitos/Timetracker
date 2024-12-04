@@ -48,18 +48,17 @@ const Dashboard = () => {
       const role = localStorage.getItem("role");
 
       if (role !== "admin") {
-        if (!toastDisplayedRef.current) {
-          toast.error("You are not authorised to view this page", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          // toastDisplayedRef.current = true;
-        }
+        toast.error("You are not authorised to view this page", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        // toastDisplayedRef.current = true;
+
         router.push("/");
       } else {
         setLoading(false);
