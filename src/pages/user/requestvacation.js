@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import Sidebar from "@/components/Sidebar";
 import { useAppContext } from "../../context/AppContext";
-import { vacationTypes } from "../../../utils/vacationTypes";
+import { vacationTypes } from "../../utils/vacationTypes";
 import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/router";
 
