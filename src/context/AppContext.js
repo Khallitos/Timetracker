@@ -81,7 +81,7 @@ export const AppProvider = ({ children }) => {
       addUserToLocalStorage(token, id, email, picture, role);
 
       if (role[0] === "user") {
-        router.push("/dashboard");
+        router.push("/user/dashboard");
       } else {
         router.push("/admin/dashboard");
       }
