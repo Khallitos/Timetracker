@@ -3,11 +3,12 @@ import { AppProvider } from "../context/AppContext";
 import Navbar from "../components/Navbar";
 import "../styles/globalS.css";
 import Footer from "@/components/Footer";
-import { GoogleOAuthProvider } from "@react-oauth/google";
-import { ToastContainer, toast } from "react-toastify";
+import { GoogleOAuthProvider } from "@react-oauth/google"; // Ensure this import is correct
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
-  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID; // Ensure this is set in your .env file
+
   return (
     <>
       <GoogleOAuthProvider clientId={clientId}>
