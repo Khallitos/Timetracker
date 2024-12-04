@@ -58,7 +58,7 @@ const Dashboard = () => {
             draggable: true,
             progress: undefined,
           });
-          toastDisplayedRef.current = true;
+          // toastDisplayedRef.current = true;
         }
         router.push("/");
       } else {
