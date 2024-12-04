@@ -16,6 +16,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useAppContext } from "../context/AppContext";
 import { useGoogleLogin } from "@react-oauth/google";
 import { Alert } from "../components";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
