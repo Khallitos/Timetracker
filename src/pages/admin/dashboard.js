@@ -117,7 +117,6 @@ const Dashboard = () => {
           <Typography sx={TimerDesigns}>{format(overTime)}</Typography>
         </Box>
       </Box>
-      <ToastContainer />
     </Box>
   );
 };
