@@ -246,6 +246,8 @@ export default function Login() {
                 <Image
                   src="https://developers.google.com/identity/images/g-logo.png"
                   alt="Google logo"
+                  width={20}
+                  height={20}
                   style={{
                     width: "20px",
                     height: "20px",

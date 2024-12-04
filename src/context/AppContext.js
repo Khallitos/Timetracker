@@ -72,7 +72,7 @@ export const AppProvider = ({ children }) => {
     try {
       const { credential } = googleData;
       const { data } = await axios.post(
-        "http://localhost:3001/api/v1/auth/login",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/auth/login",
         googleData
       );
       const { token, user } = data;
@@ -96,7 +96,7 @@ export const AppProvider = ({ children }) => {
       id: id,
     };
     const isloggedOut = await axios.post(
-      "http://localhost:3001/api/v1/auth/logout",
+      "https://timetrackerserver-by8t.onrender.com/api/v1/auth/logout",
       userDetails
     );
 
@@ -235,7 +235,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const workTimeDetails = await axios.post(
-        "http://localhost:3001/api/v1/services/workTimerDetails",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/services/workTimerDetails",
         workerDetails
       );
     } catch (error) {}
@@ -272,7 +272,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const vacationDetails = await axios.post(
-        "http://localhost:3001/api/v1/services/requestVacation",
+        "https://timetrackerserver-by8t.onrender.com/v1/services/requestVacation",
         vacationRequestDetails
       );
 
@@ -325,7 +325,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const vacationDetails = await axios.get(
-        "http://localhost:3001/api/v1/services/requestVacationDetails",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/services/requestVacationDetails",
         config
       );
 
@@ -354,7 +354,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const vacationDetails = await axios.get(
-        "http://localhost:3001/api/v1/admin/adminvacationdetails",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/adminvacationdetails",
         config
       );
 
@@ -383,7 +383,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const logDetails = await axios.get(
-        "http://localhost:3001/api/v1/admin/logview",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/logview",
         config
       );
 
@@ -412,7 +412,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const logDetails = await axios.get(
-        "http://localhost:3001/api/v1/admin/timeview",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/timeview",
         config
       );
 
@@ -446,7 +446,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const vacationDetails = await axios.post(
-        "http://localhost:3001/api/v1/admin/vacationdecisionapproved",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/vacationdecisionapproved",
         vacationDecisionDetails,
         config
       );
@@ -505,7 +505,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const vacationDetails = await axios.post(
-        "http://localhost:3001/api/v1/admin/vacationdecisionrejected",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/vacationdecisionrejected",
         vacationDecisionDetails,
         config
       );
@@ -576,7 +576,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const workTimeReceived = await axios.post(
-        "http://localhost:3001/api/v1/services/worktimechanges",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/services/worktimechanges",
         workTimeDetails,
         config
       );
@@ -631,7 +631,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const logDetails = await axios.get(
-        "http://localhost:3001/api/v1/admin/timechangesview",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/timechangesview",
         config
       );
 
@@ -665,7 +665,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const timeDetails = await axios.post(
-        "http://localhost:3001/api/v1/admin/approvetimedecision",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/approvetimedecision",
         TimeDecisionDetails,
         config
       );
@@ -724,7 +724,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const timeDetails = await axios.post(
-        "http://localhost:3001/api/v1/admin/rejecttimedecision",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/admin/rejecttimedecision",
         TimeDecisionDetails,
         config
       );
