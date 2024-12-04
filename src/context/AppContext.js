@@ -594,10 +594,8 @@ export const AppProvider = ({ children }) => {
       }
     } catch (error) {
       if (error.response && error.response.data) {
-        // Check if the server sent a `message` field
         const errorMessage = error.response.data.message || "An error occurred";
 
-        // Display the error message in a toast
         toast.error(errorMessage, {
           position: "top-center",
           autoClose: 2000,
@@ -608,7 +606,6 @@ export const AppProvider = ({ children }) => {
           progress: undefined,
         });
       } else {
-        // Fallback error message
         toast.error("An unexpected error occurred.", {
           position: "top-center",
           autoClose: 2000,
