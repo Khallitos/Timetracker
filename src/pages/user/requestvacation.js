@@ -168,12 +168,13 @@ const Requestvacation = () => {
               label="Vacation Type"
               error={Boolean(errors.vacationType)}
             >
-              {vacationTypes.map((type, index) => (
-                <MenuItem key={index} value={type}>
-                  {type}
+              {Object.entries(vacationTypes).map(([key, value]) => (
+                <MenuItem key={key} value={key}>
+                  {value}
                 </MenuItem>
               ))}
             </Select>
+
             {errors.vacationType && (
               <Typography color="error">{errors.vacationType}</Typography>
             )}
