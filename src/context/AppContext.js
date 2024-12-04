@@ -81,7 +81,7 @@ export const AppProvider = ({ children }) => {
       addUserToLocalStorage(token, id, email, picture, role);
 
       if (role[0] === "user") {
-        router.push("/user/dashboard");
+        router.push("/dashboard");
       } else {
         router.push("/admin/dashboard");
       }
@@ -272,7 +272,7 @@ export const AppProvider = ({ children }) => {
 
     try {
       const vacationDetails = await axios.post(
-        "https://timetrackerserver-by8t.onrender.com/v1/services/requestVacation",
+        "https://timetrackerserver-by8t.onrender.com/api/v1/services/requestVacation",
         vacationRequestDetails
       );
 
