@@ -143,7 +143,7 @@ const Requestvacation = () => {
           }}
         >
           <Typography variant="h6" sx={{ color: "#333" }}>
-            Request Vacation
+            Request Leave
           </Typography>
 
           <FormControl fullWidth sx={fieldContainer}>
