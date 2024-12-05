@@ -160,8 +160,8 @@ const Requestvacation = () => {
               label="Vacation Type"
               error={Boolean(errors.vacationType)}
             >
-              {Object.entries(vacationTypes).map(([key, value]) => (
-                <MenuItem key={key} value={key}>
+              {Object.values(vacationTypes).map((value) => (
+                <MenuItem key={value} value={value}>
                   {value}
                 </MenuItem>
               ))}
