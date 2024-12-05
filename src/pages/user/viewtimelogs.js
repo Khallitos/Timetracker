@@ -23,7 +23,7 @@ const dashboardDesign = {
   marginTop: "50px",
 };
 
-const Timetrackerview = () => {
+const Viewtimelogs = () => {
   const [timeSheet, setTimeSheet] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const Timetrackerview = () => {
     ).padStart(2, "0")}`;
   };
 
-  const { getTimeSheet } = useAppContext();
+  const { getUserTimeSheet } = useAppContext();
 
   const formatDate = (date) => {
     const d = new Date(date);
@@ -47,14 +47,14 @@ const Timetrackerview = () => {
   };
 
   const timeSheetDetails = async () => {
-    const data = await getTimeSheet();
+    const data = await getUserTimeSheet();
     setTimeSheet(data);
   };
 
   useEffect(() => {
     const validateRole = async () => {
       const role = localStorage.getItem("role");
-      if (role !== "admin") {
+      if (role !== "user") {
         router.push("/unauthorised");
       } else {
         setLoading(false);
@@ -199,4 +199,4 @@ const Timetrackerview = () => {
   );
 };
 
-export default Timetrackerview;
+export default Viewtimelogs;

@@ -51,7 +51,6 @@ const vacationRequestDetails = {
 };
 
 const Requestvacation = () => {
-  const toastDisplayedRef = useRef(false);
   const { vacationLeaveTaken } = useAppContext();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -106,14 +105,7 @@ const Requestvacation = () => {
       const role = localStorage.getItem("role");
 
       if (role !== "user") {
-        if (!toastDisplayedRef.current) {
-          toast.error("You are not authorized to view this page.", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-          toastDisplayedRef.current = true;
-        }
-        router.push("/");
+        router.push("/unauthorised");
       } else {
         setLoading(false);
       }

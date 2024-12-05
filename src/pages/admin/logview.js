@@ -28,7 +28,6 @@ const Logview = () => {
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const toastDisplayedRef = useRef(false);
   const router = useRouter();
 
   const { logDetailsFetched } = useAppContext();
@@ -48,14 +47,7 @@ const Logview = () => {
       const role = localStorage.getItem("role");
 
       if (role !== "admin") {
-        if (!toastDisplayedRef.current) {
-          toast.error("You are not authorized to view this page.", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-          toastDisplayedRef.current = true;
-        }
-        router.push("/");
+        router.push("/unauthorised");
       } else {
         setLoading(false);
         logDetails();

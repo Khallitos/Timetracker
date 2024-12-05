@@ -40,7 +40,6 @@ const Dashboard = () => {
   } = useAppContext();
 
   const [loading, setLoading] = useState(true);
-  const toastDisplayedRef = useRef(false); // Prevent multiple toasts
   const router = useRouter();
 
   useEffect(() => {
@@ -48,14 +47,7 @@ const Dashboard = () => {
       const role = localStorage.getItem("role");
 
       if (role !== "user") {
-        if (!toastDisplayedRef.current) {
-          toast.error("You are not authorized to view this page.", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-          toastDisplayedRef.current = true;
-        }
-        router.push("/");
+        router.push("/unauthorised");
       } else {
         setLoading(false);
       }

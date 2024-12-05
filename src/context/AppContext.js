@@ -32,7 +32,7 @@ export const AppProvider = ({ children }) => {
   const [isRunning, setIsRunning] = useState(false);
   const [isBreak, setIsBreak] = useState(false);
   const [breakTime, setBreakTime] = useState(0);
-  const totalWorkTime = 28800;
+  const totalWorkTime = 60; // minutes
   const workItervalRef = useRef(null);
   const breakIntervalRef = useRef(null);
   const overTimeIntervalRef = useRef(null);
@@ -763,6 +763,36 @@ export const AppProvider = ({ children }) => {
       }
     }
   };
+
+  const getUserTimeSheet = async () => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const logDetails = await axios.get(
+        "http://localhost:3001/api/v1/services/timeview",
+        config
+      );
+
+      const logInfo = logDetails.data.data;
+
+      return logInfo;
+    } catch (error) {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 2000, // Close after 5 seconds
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
+
   const convertTimeToDate = (time, baseDate) => {
     const [hours, minutes] = time.split(":").map(Number);
 
@@ -808,6 +838,7 @@ export const AppProvider = ({ children }) => {
         timeChangeDetails,
         approveTimeRequest,
         rejectTimeRequest,
+        getUserTimeSheet,
       }}
     >
       {children}

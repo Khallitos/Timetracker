@@ -54,7 +54,7 @@ const Navbar = () => {
   };
 
   const [loading, setLoading] = useState(true);
-  const [isUser, setIsUser] = useState(false);
+  const [role, setRole] = useState(null);
 
   const pauseWorkButton = () => {
     pauseTimer();
@@ -68,17 +68,19 @@ const Navbar = () => {
     workStopped();
   };
 
-  const findrole = () => {
+  const findRole = () => {
     const role = localStorage.getItem("role");
     if (role === "admin") {
-      setIsUser(true);
+      setRole(role);
+    } else if (role === "user") {
+      setRole(role);
     }
   };
   useEffect(() => {
     if (token) {
       setLoading(false);
     }
-    findrole();
+    findRole();
   }, [token]);
 
   return (
@@ -90,21 +92,28 @@ const Navbar = () => {
             rel="stylesheet"
           />
         </Head>
-        {isUser ? (
+        {role === "admin" ? (
           <Link
             href="/admin/dashboard"
             style={{ textDecoration: "none", color: "#3e5060" }}
           >
-            <Typography>TimeTracke</Typography>
+            <Typography>TimeTracker</Typography>
           </Link>
-        ) : (
+        ) : role === "user" ? (
           <Link
             href="/user/dashboard"
             style={{ textDecoration: "none", color: "#3e5060" }}
           >
-            <Typography>TimeTracke</Typography>
+            <Typography>TimeTracker</Typography>
           </Link>
-        )}
+        ) : role === null ? (
+          <Link
+            href="/user/dashboard"
+            style={{ textDecoration: "none", color: "#3e5060" }}
+          >
+            <Typography>TimeTracker</Typography>
+          </Link>
+        ) : null}
 
         <Box sx={{ display: "flex" }}>
           <Link href="/">

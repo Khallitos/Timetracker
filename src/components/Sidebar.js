@@ -119,6 +119,24 @@ const Sidebar = () => {
             Enter Working Time
           </Button>
         </Link>
+        <Link href="/user/viewtimelogs" style={{ textDecoration: "none" }}>
+          <Button
+            startIcon={<AssessmentIcon />}
+            sx={{
+              width: "100%",
+              justifyContent: "flex-start",
+              color: "#007bff",
+              textTransform: "none",
+              fontSize: "15px",
+              marginBottom: "10px",
+              "&:hover": {
+                backgroundColor: "rgba(0, 123, 255, 0.1)",
+              },
+            }}
+          >
+            View Working Time
+          </Button>
+        </Link>
       </Box>
 
       <Divider sx={{ marginY: "20px", backgroundColor: "#cfe2f3" }} />

@@ -31,7 +31,6 @@ const Vacationlistview = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [approvedRequests, setApprovedRequests] = useState(new Set());
   const [deniedRequests, setDeniedRequests] = useState(new Set());
-  const toastDisplayedRef = useRef(false);
   const router = useRouter();
 
   const {
@@ -85,14 +84,7 @@ const Vacationlistview = () => {
       const role = localStorage.getItem("role");
 
       if (role !== "admin") {
-        if (!toastDisplayedRef.current) {
-          toast.error("You are not authorized to view this page.", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-          toastDisplayedRef.current = true;
-        }
-        router.push("/");
+        router.push("/unauthorised");
       } else {
         setLoading(false);
         fetchVacationDetails();
