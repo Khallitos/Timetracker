@@ -773,7 +773,7 @@ export const AppProvider = ({ children }) => {
     };
     try {
       const logDetails = await axios.get(
-        "http://localhost:3001/api/v1/services/timeview",
+        "https://timetrackerserver-by8t.onrender.com/v1/services/timeview",
         config
       );
 
