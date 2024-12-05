@@ -16,7 +16,7 @@ import {
 import { useRouter } from "next/router";
 import { useAppContext } from "../../context/AppContext";
 import { ToastContainer, toast } from "react-toastify";
-import Sidebar from "@/components/admin/AdminSidebar";
+import Sidebar from "@/components/Sidebar";
 
 const dashboardDesign = {
   display: "flex",
